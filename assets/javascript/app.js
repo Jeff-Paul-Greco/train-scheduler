@@ -55,10 +55,22 @@ database.ref().on("child_added", function (childSnapshot) {
         $("<td>").text(trainName),
         $("<td>").text(trainDestination),
         $("<td>").text(trainFrequency),
-        $("<td>").text(moment(nextTrain).format("hh:mm")),
+        $("<td>").text(moment(nextTrain).format("hh:mm A")),
         $("<td>").text(minutesUntil)
     );
 
     $("#train-table > tbody").append(newLine);
 
 });
+
+function update() {
+    setTimeout(function () {
+
+        var currentTime = moment().format("HH:mm:ss A")
+        $("#current-time").text("Current Time: " + currentTime);
+        update();
+
+    }, 1000);
+};
+
+update();
