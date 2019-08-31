@@ -66,7 +66,7 @@ database.ref().on("child_added", function (childSnapshot) {
 function update() {
     setTimeout(function () {
 
-        var currentTime = moment().format("HH:mm:ss A")
+        var currentTime = moment().format("hh:mm:ss A")
         $("#current-time").text("Current Time: " + currentTime);
         update();
 
