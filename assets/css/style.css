@@ -1,4 +1,32 @@
 
+
+body {
+    background-image: url("../images/background.jpg");
+    max-width: 100%;
+    max-height: 100%;
+    font-weight: bold;
+}
+
+h1, h3 {
+    font-weight: bolder;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 34px;
+}
+
+.card {
+    opacity: 0.75;
+}
+
+th, td, .card-header, .card-body {
+    opacity: 1;
+}
+
 #train-table td, th {
     display: inline-block;
     text-align: center;
@@ -6,6 +34,10 @@
 }
 
 .jumbotron {
-    background-color: purple; 
+    font-family: cursive;
+    background-image: url("../images/banner.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
+    border-radius: 25px;
 }
