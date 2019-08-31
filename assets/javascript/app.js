@@ -45,7 +45,7 @@ database.ref().on("child_added", function (childSnapshot) {
     var firstTime = childSnapshot.val().first;
     var trainFrequency = childSnapshot.val().frequency;
 
-    var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+    var firstTimeConverted = moment(firstTime, "hh:mm A").subtract(1, "years");
     var difference = moment().diff(moment(firstTimeConverted), "minutes");
     var apart = difference % trainFrequency;
     var minutesUntil = trainFrequency - apart;
